@@ -1,2 +1,2 @@
 # Repaso
-Ejercicios de repaso
+Ejercicios de repaso programación
