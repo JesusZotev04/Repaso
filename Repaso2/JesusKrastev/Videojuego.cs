@@ -29,8 +29,13 @@ class Videojuego : Entregable {
         return this.entregado;
     }
 
-    public bool CompareTo(Object a) {
-        return this.horasEstimadas == int.Parse(a.ToString());
+    public bool CompareTo(Object objeto) {
+        Videojuego videojuego = null;
+
+        if(objeto is Videojuego)
+            videojuego = (Videojuego)objeto;
+
+        return (this.horasEstimadas > videojuego.GetHorasEstimadas());
     }
 
     public string GetTitulo() {

@@ -18,7 +18,7 @@
 
         serieConMasTemporadas = series[0];
         foreach(Serie s in series) {
-            if(s.GetNumeroTemporadas() > serieConMasTemporadas.GetNumeroTemporadas()) 
+            if(s.CompareTo(serieConMasTemporadas)) 
                 serieConMasTemporadas = s;
         }
 
@@ -29,7 +29,7 @@
 
         videojuegoConMasHorasEstimadas = videojuegos[0];
         foreach(Videojuego v in videojuegos) {
-            if(v.GetHorasEstimadas() > videojuegoConMasHorasEstimadas.GetHorasEstimadas()) 
+            if(v.CompareTo(videojuegoConMasHorasEstimadas)) 
                 videojuegoConMasHorasEstimadas = v;
         }
 

@@ -29,8 +29,13 @@ class Serie : Entregable {
         return this.entregado;
     }
 
-    public bool CompareTo(Object a) {
-        return this.numeroTemporadas == int.Parse(a.ToString());
+    public bool CompareTo(Object objeto) {
+        Serie serie = null;
+
+        if(objeto is Serie) 
+            serie = (Serie)objeto;
+
+        return (this.numeroTemporadas > serie.GetNumeroTemporadas());
     }
 
     public string GetTitulo() {
@@ -47,6 +52,6 @@ class Serie : Entregable {
     }
     
     public override string ToString() {
-        return $"Título: {titulo}\nNúmero de temporadas: {numeroTemporadas}\nEntregado: {entregado}\nGénero: {genero}\nCreador: {genero}";
+        return $"Título: {titulo}\nNúmero de temporadas: {numeroTemporadas}\nEntregado: {entregado}\nGénero: {genero}\nCreador: {creador}";
     }
 }
